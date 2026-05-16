@@ -1,0 +1,17 @@
+{
+  "name": "lead-capture-dashboard-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Starter Express backend for the lead capture dashboard.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed:demo": "node seed-demo-leads.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Lead Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-copy">
+        <span class="eyebrow">Website Form Test</span>
+        <h1>Request a Follow-up</h1>
+        <p>Submit a sample lead to the local dashboard backend.</p>
+      </div>
+      <a class="button-link primary-button" href="index.html">View Dashboard</a>
+    </header>
+
+    <main class="form-shell">
+      <section class="panel form-panel">
+        <div class="panel-header">
+          <div>
+            <h2>Contact Form</h2>
+            <p>Use this page to test lead capture without a real website.</p>
+          </div>
+        </div>
+
+        <form id="lead-form" class="lead-form">
+          <div class="form-grid">
+            <label>
+              Name
+              <input type="text" name="name" required placeholder="Jordan Lee" />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required placeholder="jordan@example.com" />
+            </label>
+
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="555-123-4567" />
+            </label>
+
+            <label>
+              Company
+              <input type="text" name="company" placeholder="Example Co." />
+            </label>
+
+            <label>
+              Source
+              <select name="source">
+                <option value="Website">Website</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Google Ads">Google Ads</option>
+                <option value="Phone Call">Phone Call</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Message
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Tell us what you need help with."
+            ></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="primary-button">Submit Lead</button>
+            <p id="form-status" class="form-status" role="status"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const form = document.querySelector("#lead-form");
+      const statusMessage = document.querySelector("#form-status");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const lead = Object.fromEntries(formData.entries());
+
+        statusMessage.className = "form-status";
+        statusMessage.textContent = "Submitting lead...";
+
+        try {
+          const response = await fetch("http://localhost:3000/api/leads", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(lead),
+          });
+          const data = await response.json();
+
+          if (!response.ok) {
+            throw new Error(data.message || "Unable to submit lead.");
+          }
+
+          form.reset();
+          statusMessage.classList.add("success");
+          statusMessage.textContent = "Lead submitted successfully.";
+        } catch (error) {
+          statusMessage.classList.add("error");
+          statusMessage.textContent = error.message;
+        }
+      });
+    </script>
+  </body>
+</html>

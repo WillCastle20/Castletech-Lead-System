@@ -1,0 +1,86 @@
+-<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lead Capture Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-copy">
+        <span class="eyebrow">Admin Workspace</span>
+        <h1>Lead Capture Dashboard</h1>
+        <p>Review, prioritize, and clean up incoming leads.</p>
+      </div>
+      <button type="button" id="refresh-leads" class="primary-button">Refresh</button>
+    </header>
+
+    <main class="dashboard-shell">
+      <section class="summary-grid" aria-label="Lead summary">
+        <article class="summary-card">
+          <span class="summary-label">Total Leads</span>
+          <strong id="total-leads-count">0</strong>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">Hot Leads</span>
+          <strong id="hot-leads-count">0</strong>
+        </article>
+        <article class="summary-card">
+          <span class="summary-label">Needs Follow-up</span>
+          <strong id="follow-up-count">0</strong>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Leads</h2>
+            <p id="lead-count-label">No leads loaded</p>
+          </div>
+          <div class="controls">
+            <div class="filter-group" aria-label="Lead filters">
+              <button type="button" class="filter-button active" data-filter="all">All</button>
+              <button type="button" class="filter-button" data-filter="Hot">Hot</button>
+              <button type="button" class="filter-button" data-filter="Warm">Warm</button>
+              <button type="button" class="filter-button" data-filter="Cold">Cold</button>
+              <button type="button" class="filter-button" data-filter="contacted">Contacted</button>
+              <button type="button" class="filter-button" data-filter="not-contacted">Not Contacted</button>
+            </div>
+            <label class="sort-control" for="sort-leads">
+              Sort
+              <select id="sort-leads">
+                <option value="newest">Newest first</option>
+                <option value="score">Highest score</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div id="lead-state" class="state-message">Loading leads...</div>
+        <div class="table-wrap" id="lead-table-wrap" hidden>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Company</th>
+                <th>Source</th>
+                <th>Score</th>
+                <th>Status</th>
+                <th>Suggested Action</th>
+                <th>Contacted</th>
+                <th>Created</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="lead-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
