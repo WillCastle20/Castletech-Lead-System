@@ -22,11 +22,10 @@ The project is designed as a practical small-business tool and a portfolio examp
 
 ### Test Lead Form
 <img width="959" height="504" alt="test-lead-form" src="https://github.com/user-attachments/assets/af1036df-e8b6-4e1b-a356-44e60dec4cd3" />
-
-### CG Dental Website Integration
+### Lead Successfully Captured From CG Dental
 <img width="959" height="326" alt="cg-dental-dashboard-integration" src="https://github.com/user-attachments/assets/a513062c-e4d1-4163-8160-832628dae1ad" />
 
-### Lead Successfully Captured From CG Dental
+### CG Dental Website Integration
 <img width="959" height="500" alt="cg-dental-form" src="https://github.com/user-attachments/assets/d8d33941-d5fb-45e9-84ff-a4780de1ec00" />
 
 
