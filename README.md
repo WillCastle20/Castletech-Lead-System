@@ -10,25 +10,26 @@ The project is designed as a practical small-business tool and a portfolio examp
 
 ## Screenshots
 
-## Screenshots
 
 ### Dashboard Overview
-![Dashboard Overview](screenshots/dashboard-main.png)
+<img width="959" height="499" alt="dashboard-main" src="https://github.com/user-attachments/assets/807eeb2b-c166-433a-b8cc-c9e04e0495bc" />
 
 ### Filtering and Lead Status
-![Lead Filters](screenshots/dashboard-filters.png)
+<img width="959" height="505" alt="dashboard-filters" src="https://github.com/user-attachments/assets/ea9ca2c7-6ddf-4882-94f6-2447557804f7" />
 
 ### Expanded Lead Details
-![Lead Details](screenshots/lead-details.png)
+<img width="950" height="376" alt="lead-details" src="https://github.com/user-attachments/assets/53e3f9fc-3fbc-4fc7-9c54-65af546b40a4" />
 
 ### Test Lead Form
-![Test Lead Form](screenshots/test-lead-form.png)
+<img width="959" height="504" alt="test-lead-form" src="https://github.com/user-attachments/assets/af1036df-e8b6-4e1b-a356-44e60dec4cd3" />
 
 ### CG Dental Website Integration
-![CG Dental Form](screenshots/cg-dental-form.png)
+<img width="959" height="326" alt="cg-dental-dashboard-integration" src="https://github.com/user-attachments/assets/a513062c-e4d1-4163-8160-832628dae1ad" />
 
 ### Lead Successfully Captured From CG Dental
-![CG Dental Integration](screenshots/cg-dental-dashboard-integration.png)
+<img width="959" height="500" alt="cg-dental-form" src="https://github.com/user-attachments/assets/d8d33941-d5fb-45e9-84ff-a4780de1ec00" />
+
+
 ## Tech Stack
 
 - **Backend:** Node.js, Express
