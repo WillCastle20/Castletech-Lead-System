@@ -12,6 +12,7 @@ The project is designed as a practical small-business tool and a portfolio examp
 
 Add screenshots here:
 
+<img width="959" height="499" alt="dashboard-main" src="https://github.com/user-attachments/assets/4520e6c5-0c0d-4741-b29e-c5af71c65e1e" />
 - Dashboard lead table
 - Expanded lead detail view
 - Test lead form
