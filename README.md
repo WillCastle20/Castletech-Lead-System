@@ -10,14 +10,25 @@ The project is designed as a practical small-business tool and a portfolio examp
 
 ## Screenshots
 
-Add screenshots here:
+## Screenshots
 
-<img width="959" height="499" alt="dashboard-main" src="https://github.com/user-attachments/assets/4520e6c5-0c0d-4741-b29e-c5af71c65e1e" />
-- Dashboard lead table
-- Expanded lead detail view
-- Test lead form
-- CG Dental form integration result
+### Dashboard Overview
+![Dashboard Overview](screenshots/dashboard-main.png)
 
+### Filtering and Lead Status
+![Lead Filters](screenshots/dashboard-filters.png)
+
+### Expanded Lead Details
+![Lead Details](screenshots/lead-details.png)
+
+### Test Lead Form
+![Test Lead Form](screenshots/test-lead-form.png)
+
+### CG Dental Website Integration
+![CG Dental Form](screenshots/cg-dental-form.png)
+
+### Lead Successfully Captured From CG Dental
+![CG Dental Integration](screenshots/cg-dental-dashboard-integration.png)
 ## Tech Stack
 
 - **Backend:** Node.js, Express
